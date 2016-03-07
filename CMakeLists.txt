@@ -10,10 +10,10 @@ set(osgQtQuick_VERSION_TWEAK 7)
 set(osgQtQuick_BUILD_DOCS OFF
   CACHE BOOL "Set to ON to build reference documentation (By default is OFF)")
 
-set(osgQtQuick_BUILD_DEBUGGER OFF
+set(osgQtQuick_BUILD_DEBUGGER ON
   CACHE BOOL "Set to ON to build debugger application (By default is OFF)")
 
-set(osgQtQuick_WITH_EARTH OFF
+set(osgQtQuick_WITH_EARTH ON
   CACHE BOOL "Set to ON to build with osgEarth library support (By default is OFF)")
 
 set(osgQtQuick_VERSION

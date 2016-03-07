@@ -1,4 +1,4 @@
-set(osgQtQuick_DEBUGGED_SCRIPT "view.qml"
+set(osgQtQuick_DEBUGGED_SCRIPT "earth.qml"
   CACHE STRING "Debugged qml script")
 
 file(GLOB _scripts RELATIVE "${CMAKE_CURRENT_LIST_DIR}/../../tests"
