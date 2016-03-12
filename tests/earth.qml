@@ -21,7 +21,7 @@ Rectangle {
 
     OSGDB.Loader {
         id: loader
-        source: "gdal_tiff.earth"
+        source: "F:/Search/osgEarth/osgearth/tests/arcgisonline.earth"
         onNodeChanged: {
             console.log("loader.node: " + getNode())
             view.cameraManipulator.home()
@@ -53,7 +53,7 @@ Rectangle {
         id: view
         focus: true
         anchors.fill: parent
-        camera.clearColor: "lightgray"
+        camera.clearColor: "black"
         sceneData: loader
         cameraManipulator: manipulator
         Keys.onPressed: {
@@ -79,19 +79,23 @@ Rectangle {
     RowLayout {
         Button {
             text: "GDAL"
-            onClicked: loader.source = "gdal_tiff.earth"
+            onClicked: loader.source = "F:/Search/osgEarth/osgearth/tests/gdal_tiff.earth"
         }
         Button {
             text: "OpenStreetMap"
-            onClicked: loader.source = "openstreetmap.earth"
+            onClicked: loader.source = "F:/Search/osgEarth/osgearth/tests/openstreetmap.earth"
         }
         Button {
             text: "ReadyMap"
-            onClicked: loader.source = "readymap-osm.earth"
+            onClicked: loader.source = "F:/Search/osgEarth/osgearth/tests/readymap-osm.earth"
         }
         Button {
             text: "VerticalScale"
-            onClicked: loader.source = "vertical_scale.earth"
+            onClicked: loader.source = "F:/Search/osgEarth/osgearth/tests/vertical_scale.earth"
+        }
+        Button {
+            text: "buildings"
+            onClicked: loader.source = "F:/Search/osgEarth/osgearth/tests/boston_buildings.earth"
         }
         Label {
             id: statusLabel

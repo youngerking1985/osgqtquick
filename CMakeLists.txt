@@ -1,11 +1,31 @@
 cmake_minimum_required(VERSION 2.8)
-
+SET(CMAKE_PREFIX_PATH "C:/Program Files (x86)/Microsoft SDKs/Windows/v7.1A/Lib/x64")
 project(osgQtQuick CXX)
 
 set(osgQtQuick_VERSION_MAJOR 2)
 set(osgQtQuick_VERSION_MINOR 0)
 set(osgQtQuick_VERSION_PATCH 0)
 set(osgQtQuick_VERSION_TWEAK 7)
+
+IF(WIN32)
+  IF(MSVC)
+        # This option is to enable the /MP switch for Visual Studio 2005 and above compilers
+        OPTION(WIN32_USE_MP "Set to ON to build osgEarth with the /MP option (Visual Studio 2005 and above)." OFF)
+        MARK_AS_ADVANCED(WIN32_USE_MP)
+        IF(WIN32_USE_MP)
+            SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
+        ENDIF(WIN32_USE_MP)
+
+        # turn off various warnings
+        # foreach(warning 4244 4251 4267 4275 4290 4786 4305 4996)
+        #     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd${warning}")
+        # endforeach(warning)
+
+        # More MSVC specific compilation flags
+        ADD_DEFINITIONS(-D_SCL_SECURE_NO_WARNINGS)
+        ADD_DEFINITIONS(-D_CRT_SECURE_NO_DEPRECATE)
+    ENDIF(MSVC)
+ENDIF(WIN32)
 
 set(osgQtQuick_BUILD_DOCS OFF
   CACHE BOOL "Set to ON to build reference documentation (By default is OFF)")
