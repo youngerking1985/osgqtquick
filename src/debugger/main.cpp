@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     osgText::registerQtQmlTypes("osgText");
     osgViewer::registerQtQmlTypes("osgViewer");
     osgViewer::registerQtQuickTypes("osgViewer");
-    osgQt::registerQtQmlTypes("osgQt");
+    //osgQt::registerQtQmlTypes("osgQt");
 #if defined(OSGQTQUICK_WITH_EARTH)
     osgEarth::Util::registerQtQmlTypes("osgEarthUtil");
 #endif

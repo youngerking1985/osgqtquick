@@ -3,7 +3,7 @@
 
 #include <osgText/Text3D>
 
-#include <osgQt/QFontImplementation>
+//#include <osgQt/QFontImplementation>
 
 #include <QtCore/QDebug>
 

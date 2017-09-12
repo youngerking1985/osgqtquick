@@ -21,7 +21,7 @@ Rectangle {
 
     OSGDB.Loader {
         id: loader
-        source: "gdal_tiff.earth"
+        source: "D:/srccode/osgearth-osgearth-2.7/tests/gdal_tiff.earth"
         onNodeChanged: {
             console.log("loader.node: " + getNode())
             view.cameraManipulator.home()

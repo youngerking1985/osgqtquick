@@ -65,7 +65,7 @@ META_Node(osgText FontImplementation)
 META_Node(osgText TextBase)
 META_Node(osgText Text3D)
 
-META_Node(osgQt QFontImplementation)
+# META_Node(osgQt QFontImplementation)
 
 META_Node(osgViewer CompositeViewer)
 
@@ -115,7 +115,7 @@ list(APPEND _srcs
 # osgText
   osgtext/module.cpp
 # osgQt
-  osgqt/module.cpp
+  # osgqt/module.cpp
 # osgViewer
   osgviewer/compositeviewer.cpp
   osgviewer/module.cpp
